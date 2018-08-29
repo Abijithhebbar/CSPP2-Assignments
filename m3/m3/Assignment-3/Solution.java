@@ -9,9 +9,9 @@ class Solution {
 
     public static void main(String[] args) {
         /** main function
-        /*/
+        */
 
-        Scanner s = new Scanner(System.in); 
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1, n2);

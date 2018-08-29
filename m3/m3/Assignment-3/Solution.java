@@ -8,8 +8,14 @@ class Solution {
 **/
 
     public static void main(String[] args) {
-        /** main function
-        */
+        
+        /**
+         * @brief [brief description]
+         * @details [long description]
+         * 
+         * @param  args 
+         * @return [description]
+         */
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
@@ -18,8 +24,12 @@ class Solution {
         System.out.println(gcd(n1, n2));
     }
     public static int gcd(final int n1, final int n2) {
-        /** gcd function
-        **/
+        /**
+         * @brief n1, n2
+         * @details [long description]
+         * 
+         * @return [gcd]
+         */
          if  (n2 == 0) {
             return n1;
         } else {

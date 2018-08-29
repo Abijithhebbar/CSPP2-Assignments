@@ -1,18 +1,24 @@
-
 import java.util.Scanner;
 /**
-    Do not modify this main function.
-    **/
+ * @brief [brief description]
+ * @details [long description]
+ * @return [description]
+ */
+
 final class Solution {
     /**
-    Do not modify this main function.
-    **/
+     * @brief [brief description]
+     * @details [long description]
+     * @return [description]
+     */
     private Solution() { }
-/** solution class.
-**/
-
-    public static void main(final String[] args) {
-        
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param String [description]
+     */
+    public static void main(final String[] args) {     
         /**
          * @brief brief description.
          * @details long description.
@@ -20,7 +26,6 @@ final class Solution {
          * @param  args 
          * @return [description]
          **/
-
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();

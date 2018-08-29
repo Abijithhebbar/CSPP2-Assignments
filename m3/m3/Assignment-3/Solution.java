@@ -5,15 +5,14 @@ import java.util.Scanner;
 
 final class Solution {
     /**
-     * 
+     * hell.
      */
     private Solution() { }
     /**
-     * 
      * @param args [description]
      */
-    public static void main(final String[] args) { 
-        Scanner s = new Scanner(System.in);  
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1, n2);
@@ -21,10 +20,8 @@ final class Solution {
     }
 
     /**
-     * 
-     * @param int n2
-     * @param int n1
-     * 
+     * @param n2 num
+     * @param n1 num
      * @return [description]
      */
 

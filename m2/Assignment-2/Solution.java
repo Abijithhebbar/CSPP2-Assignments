@@ -18,10 +18,10 @@ public final class Solution {
         /**
         *main method
         */
-        Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
         roots(a, b, c);
     }
     /**

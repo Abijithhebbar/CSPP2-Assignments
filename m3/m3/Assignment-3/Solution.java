@@ -7,8 +7,8 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        /* main function
-        */
+        /** main function
+        /*/
 
         Scanner s = new Scanner(System.in);    
         int n1 = s.nextInt();
@@ -19,15 +19,13 @@ public class Solution {
     /*
     Need to write the gcd function and print the output.
     */
-    public static int gcd(final int n1, final int n2)
-    /* gcd function
-    */
-    {
+    public static int gcd(final int n1, final int n2) {
+        /** gcd function
+        **/
          if  (n2 == 0)
         {
             return n1;
-        }
-    else
+        }else
     {
         return gcd(n2, (n1 % n2));
     }

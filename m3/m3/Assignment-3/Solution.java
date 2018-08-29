@@ -26,8 +26,7 @@ final class Solution {
      */
 
     public static int gcd(final int n1, final int n2) {
-       
-         if  (n2 == 0) {
+        if  (n2 == 0) {
             return n1;
         } else {
         return gcd(n2, (n1 % n2));

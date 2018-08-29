@@ -3,30 +3,26 @@ import java.util.Scanner;
 /*
     Do not modify this main function.
     */
-public class Solution {
-
+class Solution {
+/** solution class 
+**/
 
     public static void main(String[] args) {
         /** main function
         /*/
 
-        Scanner s = new Scanner(System.in);    
+        Scanner s = new Scanner(System.in); 
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1, n2);
         System.out.println(gcd(n1, n2));
     }
-    /*
-    Need to write the gcd function and print the output.
-    */
     public static int gcd(final int n1, final int n2) {
         /** gcd function
         **/
-         if  (n2 == 0)
-        {
+         if  (n2 == 0) {
             return n1;
-        }else
-    {
+        } else {
         return gcd(n2, (n1 % n2));
     }
 

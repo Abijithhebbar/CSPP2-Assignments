@@ -1,44 +1,35 @@
 import java.util.Scanner;
 /**
- * @brief [brief description]
- * @details [long description]
- * @return [description]
+ *this is a solution.
  */
 
 final class Solution {
     /**
-     * @brief [brief description]
-     * @details [long description]
-     * @return [description]
+     * 
      */
     private Solution() { }
     /**
-     * @brief [brief description]
-     * @details [long description]
      * 
-     * @param String [description]
+     * @param args [description]
      */
-    public static void main(final String[] args) {     
-        /**
-         * @brief brief description.
-         * @details long description.
-         * 
-         * @param  args 
-         * @return [description]
-         **/
-        Scanner s = new Scanner(System.in);
+    public static void main(final String[] args) { 
+        Scanner s = new Scanner(System.in);  
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1, n2);
         System.out.println(gcd(n1, n2));
     }
+
+    /**
+     * 
+     * @param int n2
+     * @param int n1
+     * 
+     * @return [description]
+     */
+
     public static int gcd(final int n1, final int n2) {
-        /**
-         * @brief n1, n2
-         * @details [long description]
-         * 
-         * @return [gcd]
-         **/
+       
          if  (n2 == 0) {
             return n1;
         } else {

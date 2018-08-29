@@ -1,21 +1,25 @@
 
 import java.util.Scanner;
-/*
+/**
     Do not modify this main function.
-    */
-class Solution {
-/** solution class
+    **/
+final class Solution {
+    /**
+    Do not modify this main function.
+    **/
+    private Solution() { }
+/** solution class.
 **/
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         
         /**
-         * @brief [brief description]
-         * @details [long description]
+         * @brief brief description.
+         * @details long description.
          * 
          * @param  args 
          * @return [description]
-         */
+         **/
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
@@ -29,7 +33,7 @@ class Solution {
          * @details [long description]
          * 
          * @return [gcd]
-         */
+         **/
          if  (n2 == 0) {
             return n1;
         } else {

@@ -34,7 +34,7 @@ public class Solution {
 			for (int j = 0; j < b; j++) {
 				System.out.print(sum[i][j]+" ");
 			}
-			System.out.println("");
+			// System.out.println("");
 		}
 		} else {
 			System.out.println("not possible");

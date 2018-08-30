@@ -6,7 +6,7 @@ final class Solution {
     /**
      default constructor.
      **/
-    private Solution () {
+    private Solution() {
         /**
          * @brief [brief description].
          * @details [long description].
@@ -14,6 +14,11 @@ final class Solution {
          **/
     }
     /* Fill the main function to print resultant of addition of matrices*/
+    /**
+     * @brief [brief description].
+     * @details [long description].
+     * @param args [description].
+     **/
     public static void main(final String[] args) {
         int[][] arr1;
         int[][] arr2;

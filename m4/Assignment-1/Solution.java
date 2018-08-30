@@ -2,8 +2,8 @@ import java.util.Scanner;
 /**
  * class.
  **/
-final class Solution
-{ /*
+final class Solution {
+ /*
     Fill this main function to print maximum of given array
     */
     /**
@@ -19,8 +19,7 @@ final class Solution
      * @details [long description].
      * @param args [description].
      **/
-    public static void main(String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr;

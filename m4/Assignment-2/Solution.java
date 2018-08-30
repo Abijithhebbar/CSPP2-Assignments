@@ -32,7 +32,7 @@ public class Solution {
 		}
 		for (int i = 0; i < a; i++) {
 			for (int j = 0; j < b; j++) {
-				System.out.print(sum[i][j]+ " ");
+				System.out.print(sum[i][j]+" ");
 			}
 			System.out.println(" ");
 		}

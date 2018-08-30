@@ -1,21 +1,16 @@
 import java.util.Scanner;
 /**
- * @brief [brief description].
- * @details [long description].
- * @param args [description].
+ this a class.
  **/
 final class Solution {
     /**
-     * @brief [brief description].
-     * @details [long description].
-     * @return [description].
+     default constructor.
      **/
     private Solution () {
         /**
-         * @brief [brief description]
-         * @details [long description]
-         * 
-         * @param args [description]
+         * @brief [brief description].
+         * @details [long description].
+         * @param args [description].
          **/
     }
     /* Fill the main function to print resultant of addition of matrices*/

@@ -8,12 +8,13 @@ public class Solution
     Do not modify this main function.
     */
     public static String binaryToDecimal(String s) {
+
         int len = s.length();
-        int result = 0;
+        double result = 0;
         for (int i = 0; i < len; i++) {
-            // System.out.println(s.charAt(i));
-            if (s.charAt(i) == 1) {
-                result = result + 2^((len - 1) - i);
+            //System.out.println(s.charAt(i));
+            if (s.charAt(i) == '1') {
+                result = result + Math.pow(2, ((len - 1) - i));
             }
         }
         return (result + "");
@@ -25,7 +26,7 @@ public class Solution
         for(int i = 0; i < n; i++){
             String s = sc.nextLine();
             String res = binaryToDecimal(s);//Write binaryToDecimal function
-            System.out.println(res);
+            System.out.println(res.substring(0,(res.length()-2)));
         }
     }
 

@@ -4,40 +4,39 @@
  **/
 import java.util.Scanner;
 /**
- import function. 
+ import function.
 **/
-final class Solution
-{
+final class Solution {
 /**
  class.
  **/
  private Solution() {
- 	/**
- 	 default constructor.
- 	 **/
+    /**
+     default constructor.
+     **/
  }
 /**
+ * @param s.
  * @return strrev.
  **/
- 	public static String reverseString(final String s) {
-		int len = s.length();
-		String strrev = "";
-		for (int i = (len - 1); i >= 0; i--) {
-				strrev = strrev + s.charAt(i);
+    public static String reverseString(final String s) {
+        int len = s.length();
+        String strrev = "";
+        for (int i = (len - 1); i >= 0; i--) {
+                strrev = strrev + s.charAt(i);
 
-		}
-		return strrev;
-	}
-	/** 
-	 * @param args.
-	 **/
-	public static void main(final String[] args)
-	{
-		Scanner sc = new Scanner(System.in);
-		String s = sc.nextLine();
-		String reverse = reverseString(s);	
-		System.out.println(reverse);
-	}
-	//Write reverseString function
+        }
+        return strrev;
+    }
+    /**
+     * @param args.
+     **/
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String reverse = reverseString(s);
+        System.out.println(reverse);
+    }
+    //Write reverseString function
 
 }

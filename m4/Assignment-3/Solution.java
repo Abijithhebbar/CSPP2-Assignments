@@ -7,6 +7,19 @@ public class Solution
 {/*
     Do not modify this main function.
     */
+    /**
+     default constructor.
+     */
+    private Solution() {
+        /**
+         default constructor.
+         **/
+            }
+            /**.
+         * @param s
+         * @return result1.
+         **/
+
     public static String binaryToDecimal(String s) {
 
         int len = s.length();
@@ -17,8 +30,12 @@ public class Solution
                 result = result + Math.pow(2, ((len - 1) - i));
             }
         }
-        return (result + "");
+        String result1 =  result + "";
+        return (result1.substring(0, (result1.length()-2)));
     }
+    /**. 
+     * @param args.
+     **/
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
@@ -26,7 +43,7 @@ public class Solution
         for(int i = 0; i < n; i++){
             String s = sc.nextLine();
             String res = binaryToDecimal(s);//Write binaryToDecimal function
-            System.out.println(res.substring(0,(res.length()-2)));
+            System.out.println(res);
         }
     }
 

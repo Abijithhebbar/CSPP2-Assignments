@@ -16,7 +16,7 @@ final class Solution {
      **/
  }
 /**.
- * @param s
+ * @param s input.
  * @return strrev.
  **/
     public static String reverseString(final String s) {
@@ -29,7 +29,7 @@ final class Solution {
         return strrev;
     }
     /**.
-     * @param args
+     * @param args input.
      **/
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);

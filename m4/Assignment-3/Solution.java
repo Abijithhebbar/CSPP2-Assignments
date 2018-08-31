@@ -1,6 +1,6 @@
 import java.util.Scanner;
-/** 
-class
+/**.
+class.
 **/
 final class Solution { /*
     Do not modify this main function.
@@ -14,7 +14,7 @@ final class Solution { /*
          **/
             }
             /**.
-         * @param s
+         * @param s input string.
          * @return result1.
          **/
 
@@ -32,14 +32,14 @@ final class Solution { /*
         return (result1.substring(0, (result1.length() - 2)));
     }
     /**. 
-     * @param args
+     * @param args argument.
      **/
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < n; i++) {
             String s = sc.nextLine();
-            String res = binaryToDecimal(s);//Write binaryToDecimal function
+            String res = binaryToDecimal(s); //Write binaryToDecimal function
             System.out.println(res);
         }
     }

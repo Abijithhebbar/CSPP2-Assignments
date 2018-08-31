@@ -15,8 +15,8 @@ final class Solution {
      default constructor.
      **/
  }
-/**
- * @param s.
+/**.
+ * @param s
  * @return strrev.
  **/
     public static String reverseString(final String s) {
@@ -28,8 +28,8 @@ final class Solution {
         }
         return strrev;
     }
-    /**
-     * @param args.
+    /**.
+     * @param args
      **/
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);

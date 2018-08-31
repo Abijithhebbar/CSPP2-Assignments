@@ -31,7 +31,7 @@ final class Solution { /*
         String result1 =  result + "";
         return (result1.substring(0, (result1.length() - 2)));
     }
-    /**. 
+    /**.
      * @param args argument.
      **/
     public static void main(final String[] args) {

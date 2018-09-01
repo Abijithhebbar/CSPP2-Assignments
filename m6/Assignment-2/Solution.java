@@ -24,8 +24,9 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
-int z = 2, b = z + 1, c = z +z, d = z + b, e = b + b, f = b + c, g = c + c, h = c + d;
-int  k = 2 * d, l = 100, m = 200, n = 300, o = 400, p = 500;
+int z = 2, b = z + 1, c = z + z, d = z + b, e = b + b, f = b + c, g = c + c, h = c + d;
+int  k = 2 * d; 
+int l = k * k, m = l * z, n = l * c, o = l * d, p = l * e;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
             a[i][j] = a[i][j] / 50;

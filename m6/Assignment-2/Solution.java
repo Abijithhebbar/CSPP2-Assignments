@@ -28,32 +28,23 @@ final class Solution {
         for (int j = 0; j < columns; j++) {
             if (a[i][j] < 50 && a[i][j] > 0) {
                 a[i][j] = 0;
-                    }
-            else if (a[i][j] > 51 && a[i][j] < 101) {
+                    } else if (a[i][j] > 51 && a[i][j] < 101) {
                 a[i][j] = 100;
-                    }
-            else if (a[i][j] >= 101 && a[i][j] < 151) {
+                    } else if (a[i][j] >= 101 && a[i][j] < 151) {
                 a[i][j] = 100;
-                }
-            else if (a[i][j] >= 151 && a[i][j] < 201) {
+                } else if (a[i][j] >= 151 && a[i][j] < 201) {
                 a[i][j] = 200;
-                }
-            else if (a[i][j] >= 201 && a[i][j] < 251) {
+                } else if (a[i][j] >= 201 && a[i][j] < 251) {
                 a[i][j] = 200;
-                }
-            else if (a[i][j] >= 251 && a[i][j] < 301) {
+                } else if (a[i][j] >= 251 && a[i][j] < 301) {
                 a[i][j] = 300;
-            }
-            else if (a[i][j] >= 301 && a[i][j] < 351) {
+            } else if (a[i][j] >= 301 && a[i][j] < 351) {
                 a[i][j] = 300;
-                }
-            else if (a[i][j] >= 351 && a[i][j] < 401) {
+                } else if (a[i][j] >= 351 && a[i][j] < 401) {
                 a[i][j] = 400;
-                }
-            else if (a[i][j] >= 401 && a[i][j] < 451) {
+                } else if (a[i][j] >= 401 && a[i][j] < 451) {
                 a[i][j] = 400;
-                }
-            else if (a[i][j] >= 451 && a[i][j] < 501) {
+                } else if (a[i][j] >= 451 && a[i][j] < 501) {
                 a[i][j] = 500;
                 }
             }

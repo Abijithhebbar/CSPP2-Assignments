@@ -27,27 +27,20 @@ final class Solution {
 
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
-            if (a[i][j] < 50 && a[i][j] > 0) {
+            a[i][j] = a[i][j] / 50;
+            if (a[i][j] == 0) {
                 a[i][j] = 0;
-                    } else if (a[i][j] > 51 && a[i][j] < 101) {
+            } else if (a[i][j] == 1 || a[i][j] == 2) {
                 a[i][j] = 100;
-                    } else if (a[i][j] >= 101 && a[i][j] < 151) {
-                a[i][j] = 100;
-                } else if (a[i][j] >= 151 && a[i][j] < 201) {
+            }else if (a[i][j] == 3 || a[i][j] == 4) {
                 a[i][j] = 200;
-                } else if (a[i][j] >= 201 && a[i][j] < 251) {
-                a[i][j] = 200;
-                } else if (a[i][j] >= 251 && a[i][j] < 301) {
+            }else if (a[i][j] == 5 || a[i][j] == 6) {
                 a[i][j] = 300;
-            } else if (a[i][j] >= 301 && a[i][j] < 351) {
-                a[i][j] = 300;
-                } else if (a[i][j] >= 351 && a[i][j] < 401) {
+            }else if (a[i][j] == 7 || a[i][j] == 8) {
                 a[i][j] = 400;
-                } else if (a[i][j] >= 401 && a[i][j] < 451) {
-                a[i][j] = 400;
-                } else if (a[i][j] >= 451 && a[i][j] < 501) {
+            }else if (a[i][j] == 9 || a[i][j] == 10) {
                 a[i][j] = 500;
-                }
+            }
             }
         }
         return a;

@@ -24,22 +24,22 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
-
+int b = 3, c = 4, d = 5, e = 6, f = 7, g = 8, h = 9, k = 10, l = 100, m = 200, n = 300, o = 400, p = 500;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
             a[i][j] = a[i][j] / 50;
             if (a[i][j] == 0) {
                 a[i][j] = 0;
             } else if (a[i][j] == 1 || a[i][j] == 2) {
-                a[i][j] = 100;
-            } else if (a[i][j] == 3 || a[i][j] == 4) {
-                a[i][j] = 200;
-            } else if (a[i][j] == 5 || a[i][j] == 6) {
-                a[i][j] = 300;
-            } else if (a[i][j] == 7 || a[i][j] == 8) {
-                a[i][j] = 400;
-            } else if (a[i][j] == 9 || a[i][j] == 10) {
-                a[i][j] = 500;
+                a[i][j] = l;
+            } else if (a[i][j] == b || a[i][j] == c) {
+                a[i][j] = m;
+            } else if (a[i][j] == d || a[i][j] == e) {
+                a[i][j] = n;
+            } else if (a[i][j] == f || a[i][j] == g) {
+                a[i][j] = o;
+            } else if (a[i][j] == h || a[i][j] == k) {
+                a[i][j] = p;
             }
             }
         }

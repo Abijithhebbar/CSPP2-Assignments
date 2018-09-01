@@ -32,13 +32,13 @@ final class Solution {
                 a[i][j] = 0;
             } else if (a[i][j] == 1 || a[i][j] == 2) {
                 a[i][j] = 100;
-            }else if (a[i][j] == 3 || a[i][j] == 4) {
+            } else if (a[i][j] == 3 || a[i][j] == 4) {
                 a[i][j] = 200;
-            }else if (a[i][j] == 5 || a[i][j] == 6) {
+            } else if (a[i][j] == 5 || a[i][j] == 6) {
                 a[i][j] = 300;
-            }else if (a[i][j] == 7 || a[i][j] == 8) {
+            } else if (a[i][j] == 7 || a[i][j] == 8) {
                 a[i][j] = 400;
-            }else if (a[i][j] == 9 || a[i][j] == 10) {
+            } else if (a[i][j] == 9 || a[i][j] == 10) {
                 a[i][j] = 500;
             }
             }

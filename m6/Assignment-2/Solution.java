@@ -31,19 +31,12 @@ int l = k * k, m = l * z, n = l * b, o = l * c, p = l * d;
 int y = l / 2;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
-            a[i][j] = a[i][j] / y;
-            if (a[i][j] == 0) {
-                a[i][j] = 0;
-            } else if (a[i][j] == 1 || a[i][j] == 2) {
-                a[i][j] = l;
-            } else if (a[i][j] == b || a[i][j] == c) {
-                a[i][j] = m;
-            } else if (a[i][j] == d || a[i][j] == e) {
-                a[i][j] = n;
-            } else if (a[i][j] == f || a[i][j] == g) {
-                a[i][j] = o;
-            } else if (a[i][j] == h || a[i][j] == k) {
-                a[i][j] = p;
+            int remainder = a[i][j] % 100;
+            int rounded = 0;
+            if (remainder >= 50) {
+            rounded = a[i][j] - remainder + 100;
+            } else {
+             rounded = a[i][j] - remainder;
             }
             }
         }

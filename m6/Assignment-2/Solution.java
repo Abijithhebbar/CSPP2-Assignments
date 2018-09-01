@@ -24,17 +24,13 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
-int z = 2, b = z + 1, c = z + z, d = z + b, e = b + b;
-int f = b + c, g = c + c, h = c + d;
-int  k = 2 * d;
-int l = k * k, m = l * z, n = l * b, o = l * c, p = l * d;
-int y = l / 2;
+        int c = 5, d = c * 2, e = d * d, f = c * d;
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < columns; j++) {
-            int remainder = a[i][j] % 100;
+            int remainder = a[i][j] % e;
             int rounded = 0;
-            if (remainder >= 50) {
-            rounded = a[i][j] - remainder + 100;
+            if (remainder >= f) {
+            rounded = a[i][j] - remainder + e;
             a[i][j] = rounded;
             } else {
              rounded = a[i][j] - remainder;

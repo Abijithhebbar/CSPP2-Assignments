@@ -35,8 +35,10 @@ int y = l / 2;
             int rounded = 0;
             if (remainder >= 50) {
             rounded = a[i][j] - remainder + 100;
+            a[i][j] = rounded;
             } else {
              rounded = a[i][j] - remainder;
+             a[i][j] = rounded;
             }
             }
         }

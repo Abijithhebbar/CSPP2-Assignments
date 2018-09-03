@@ -2,6 +2,9 @@
  *
  */
 import java.util.Scanner;
+/**
+ * class declaration.
+ **/
     final class InputValidator {
         /**.
            Declaring a string.
@@ -11,10 +14,16 @@ import java.util.Scanner;
            Declaring string length
         **/
         private int len;
+        /**
+         * @param strCheck1 string input.
+         **/
         InputValidator(final String strCheck1) {
         strCheck = strCheck1;
         len = strCheck.length();
         }
+        /**
+         Boolean check function.
+         **/
         public boolean validateData() {
     final int b = 6;
     if (len >= b) {
@@ -23,9 +32,17 @@ import java.util.Scanner;
     return false;
 }
 }
-
+/**
+ main class function.
+ **/
 final class Solution {
+	/**
+	 constructor.
+	 **/
     private Solution() { }
+    /**.
+     * @param args input string.
+     **/
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();

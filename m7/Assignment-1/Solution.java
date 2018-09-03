@@ -22,7 +22,7 @@ import java.util.Scanner;
         len = strCheck.length();
         }
         /**
-         Boolean check function.
+         * @return true or false.
          **/
         public boolean validateData() {
     final int b = 6;
@@ -36,9 +36,9 @@ import java.util.Scanner;
  main class function.
  **/
 final class Solution {
-	/**
-	 constructor.
-	 **/
+    /**
+     constructor.
+     **/
     private Solution() { }
     /**.
      * @param args input string.

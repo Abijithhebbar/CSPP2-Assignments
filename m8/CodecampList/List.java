@@ -32,6 +32,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * Array declaration.
+     */
     private int[] arr;
 
 

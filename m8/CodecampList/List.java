@@ -134,7 +134,9 @@ public class List {
         	for (int i = index; i < size - 1; i++) {
         	arr[i] = arr [i + 1];
         }
-        arr[size - 1] = arr[size];
+        
+        arr[size] = 0;
+        size--;
     }else {
     	System.out.println("Invalid Postion Exception");
     }

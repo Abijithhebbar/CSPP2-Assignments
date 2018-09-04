@@ -1,7 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 /**
-main class. 
+ * @brief [brief description].
+ * @details [long description].
+ * 
  **/
 public class List {
     //Implement all the methods mentioned to build a ListADT
@@ -27,7 +29,6 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -80,9 +81,7 @@ public class List {
         // That is the initial value to use for size.
         arr = new int[10];
         size = 0;
-
-    }
-    
+}
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -91,10 +90,12 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**
+     * @param item int.
+     **/
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
         size = size + 1;
@@ -107,6 +108,9 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * @return size.
+     **/
     public int size() {
         // replace the code below to implement the size method
         return size;
@@ -116,7 +120,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -132,17 +136,19 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    /**
+     * @param index int.
+     **/
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
-            arr[i] = arr [i + 1];
+            arr[i] = arr[i + 1];
         }
-        
         arr[size] = 0;
         size--;
-    }else {
+    } else {
         System.out.println("Invalid Position Exception");
     }
     }
@@ -155,18 +161,19 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public void get(int index) {
+    /**
+     * @param index int.
+     **/
+    public void get(final int index) {
         // Replace the code below to write the code for get
         if (index >= 0 && index < size) {
             System.out.println(arr[index]);
-        } 
-        
-    }
-
-    /*
+        }
+}
+/*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -175,7 +182,6 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -186,28 +192,34 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * @return String.
+     **/
     public String toString() {
         // Replace the code below
         String result = "[";
         for (int i = 0; i < size; i++) {
-            if (i == (size-1)) {
-                result = result + arr[size-1] + "]";
+            if (i == (size - 1)) {
+                result = result + arr[size - 1] + "]";
             } else {
                 result = result + arr[i] + ",";
             }
         }
         return result;
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * @param item int.
+     * @return true or false.
+     **/
+    public boolean contains(final int item) {
         // Replace the code below
-        for(int i : arr) {
+        for (int i : arr) {
             if (i == item) {
                 return true;
             }
@@ -216,21 +228,27 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * @param item int.
+     * @return i or -1.
+     **/
+    public int indexOf(final int item) {
         // Replace the code below
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (arr[i] == item) {
                 return i;
             }
         }
         return -1;
     }
-
-    public static void main(String[] args) {
+/**
+ * @param args string.
+ **/
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -270,6 +288,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }

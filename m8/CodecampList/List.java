@@ -1,8 +1,10 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+main class. 
+ **/
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -61,6 +63,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     default constructor.
+     **/
     public List() {
 
         // what are the two variables to be initialized here?
@@ -131,14 +136,14 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-        	for (int i = index; i < size - 1; i++) {
-        	arr[i] = arr [i + 1];
+            for (int i = index; i < size - 1; i++) {
+            arr[i] = arr [i + 1];
         }
         
         arr[size] = 0;
         size--;
     }else {
-    	System.out.println("Invalid Position Exception");
+        System.out.println("Invalid Position Exception");
     }
     }
 
@@ -156,7 +161,7 @@ public class List {
     public void get(int index) {
         // Replace the code below to write the code for get
         if (index >= 0 && index < size) {
-        	System.out.println(arr[index]);
+            System.out.println(arr[index]);
         } 
         
     }
@@ -185,11 +190,11 @@ public class List {
         // Replace the code below
         String result = "[";
         for (int i = 0; i < size; i++) {
-        	if (i == (size-1)) {
-        		result = result + arr[size-1] + "]";
-        	} else {
-        		result = result + arr[i] + ",";
-        	}
+            if (i == (size-1)) {
+                result = result + arr[size-1] + "]";
+            } else {
+                result = result + arr[i] + ",";
+            }
         }
         return result;
     } 
@@ -203,9 +208,9 @@ public class List {
     public boolean contains(int item) {
         // Replace the code below
         for(int i : arr) {
-        	if (i == item) {
-        		return true;
-        	}
+            if (i == item) {
+                return true;
+            }
         }
         return false;
     }
@@ -218,14 +223,14 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for(int i = 0; i < size; i++) {
-        	if (arr[i] == item) {
-        		return i;
-        	}
+            if (arr[i] == item) {
+                return i;
+            }
         }
         return -1;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -268,5 +273,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }

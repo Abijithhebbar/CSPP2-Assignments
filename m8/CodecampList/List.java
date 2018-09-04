@@ -155,7 +155,11 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-       return arr[index];
+        if (index >= 0 && index < size) {
+        	return arr[index];
+        } else {
+        return -1;	
+        }
         
     }
 
@@ -259,6 +263,7 @@ public class List {
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
                 break;
                 case "get":
+                if(l.size> Integer.parseInt(tokens[1])) 
                 System.out.println(l.get(Integer.parseInt(tokens[1])));
                 break;
                 case "contains":

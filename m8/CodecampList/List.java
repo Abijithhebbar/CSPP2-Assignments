@@ -157,7 +157,7 @@ public class List {
         // Replace the code below to write the code for get
         if (index >= 0 && index < size) {
         	return arr[index];
-        }else {
+        } else {
         return -1;	
         }
         
@@ -220,7 +220,7 @@ public class List {
     public int indexOf(int item) {
         // Replace the code below
         for(int i = 0; i < size; i++) {
-        	if (i == item) {
+        	if (arr[i] == item) {
         		return i;
         	}
         }

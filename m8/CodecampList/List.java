@@ -138,7 +138,7 @@ public class List {
         arr[size] = 0;
         size--;
     }else {
-    	System.out.println("Invalid Postion Exception");
+    	System.out.println("Invalid Position Exception");
     }
     }
 

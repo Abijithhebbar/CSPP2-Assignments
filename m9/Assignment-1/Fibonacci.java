@@ -29,6 +29,7 @@ public class Fibonacci
     public static List fib(int n) {
     	int a = 0, b = 1, c;
     	List obj = new List();
+    	obj.List(n);
     	if ( n == 1) {
     		obj.add(a);
     	} else if( n == 2) {

@@ -28,6 +28,12 @@ final class Fibonacci {
      * Look for the hint.txt if some of the testcases fail.
      */
     /**
+     default constructor.
+     **/
+    private Fibonacci() {
+
+    }
+    /**
      * @param n int.
      * @return obj.
      **/

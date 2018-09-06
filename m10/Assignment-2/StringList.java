@@ -125,10 +125,9 @@ public StringList(int n) {
     public void add(String item) {
         //Inserts the specified element at the end of the list.
     if (size == list.length) {
-resize();
-    } else {
-    	 list[size++] = item;
+		resize();
     }
+    list[size++] = item;
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
@@ -269,7 +268,7 @@ resize();
     }
     public void resize() {
         int capacity = 2*size;
-        String[] list = new String[capacity];
+        // String[] list = new String[capacity];
         list= Arrays.copyOf(list, capacity);
         // return arr;
     }

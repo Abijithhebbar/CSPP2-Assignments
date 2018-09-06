@@ -61,6 +61,9 @@ public class List {
      * initializing the size.
      **/
     private int size;
+    /**
+     *initializing a. 
+     **/
     final int a;
 
     /*

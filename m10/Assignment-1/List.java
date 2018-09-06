@@ -61,12 +61,7 @@ public class List {
      * initializing the size.
      **/
     private int size;
-    /**
-     *initializing a.
-     **/
-    final int a;
-
-    /*
+/*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -81,7 +76,7 @@ public class List {
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
         // private a = 10;
-        a = 10;
+        final int a = 10;
         list = new int[a];
 
         // Think about the initial value for size.
@@ -109,7 +104,6 @@ public class List {
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
-        a = 10;
     }
 /*
      * The add method does what the name suggests.

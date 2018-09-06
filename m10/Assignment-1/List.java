@@ -101,7 +101,6 @@ public class List {
      */
     /**
      * @param capacity int.
-     * @return capacity.
      */
     public List(final int capacity) {
         size = 0;

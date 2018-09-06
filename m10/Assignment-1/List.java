@@ -93,7 +93,7 @@ public class List {
      * constructor.
      * 
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -109,7 +109,10 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    /**
+    * @param item int.
+     */
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
     }
@@ -154,6 +157,9 @@ public class List {
      * 
      * The method returns an int. Empty list should return 0.
      */
+    /**
+     * @return size.
+     **/
     public int size() {
         return size;
     }
@@ -178,8 +184,10 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
-    public void remove(int index) {
+/** 
+ * @param item.
+ */
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= 0 && index < size) {
@@ -203,7 +211,11 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    /** 
+     * @param item int.
+     * @return list.
+     **/
+    public int get(final int index) {
         if(index < 0 || index >= size) {
             return -1;
         } else {
@@ -231,6 +243,9 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * @return string.
+     **/
     public String toString() {
         if(size == 0)
             return "[]";
@@ -249,7 +264,11 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * @param item int.
+     * @return true or false.
+     */
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -258,7 +277,11 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * @param item int.
+     * @return 1.
+     */
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
@@ -267,24 +290,29 @@ public class List {
     }
    /*Inserts all the elements of specified int 
     array to the end of list*/
-    public void addAll(int items[])
-    {
-        // write the logic 
+    /**
+     * @param items int.
+     **/
+    public void addAll(final int items[]) {
+        // write the logic
         int len = items.length + size;
         int temp = 0;
-        for (int i =size; i < len; i++){
+        for (int i = size; i < len; i++){
         	list[i] = items[temp];
         	temp++;
         }
         size = len;
     }
-
-     /* 
-        Inserts the specified element at the specified index 
+/*
+        Inserts the specified element at the specified index
 	by moving all the elements to the right.
         The method returns void (nothing)
      */
-    public void add(int index,int item) {
+        /**
+         * @param index int index.
+         * @param item int.
+         */
+    public void add(final int index,int item) {
          // write the logic
     	for (int i = size; i > index; i--) {
     		list[i] = list[i - 1];
@@ -293,13 +321,15 @@ public class List {
     	size++;
 
     }
-    
-    /* Returns the count of occurances of a given item in the list*/
-    public int count(int item)
-    {
+/* Returns the count of occurances of a given item in the list*/
+    /** 
+     * @param item int.
+     * @return count.
+     **/
+    public int count(final int item) {
          // write the logic
     	int count = 0;
-    	for (int i =0; i < size; i++) {
+    	for (int i = 0; i < size; i++) {
     		if (list[i] == item) {
     			count++;
     		}
@@ -307,8 +337,10 @@ public class List {
         return count;
     }
 
-
-	public static void main(String[] args) {
+/** 
+ * @param args string.
+ **/
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -328,8 +360,8 @@ public class List {
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
                 } else {
-                    if(t.length > 1) {
-                        l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
+                    if (t.length > 1) {
+                        l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
                 }
@@ -338,14 +370,15 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length == 2){
+                if(tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 int temp[] = new int[t1.length];
-                for (int i = 0;i<temp.length;i++)
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
-                break; 
+                break;
                 case "size":
                 // invoke size method and print the list size
                 // BTW, list size is not the array size
@@ -369,6 +402,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }

@@ -62,7 +62,7 @@ public class List {
      **/
     private int size;
     /**
-     *initializing a. 
+     *initializing a.
      **/
     final int a;
 

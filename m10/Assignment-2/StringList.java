@@ -137,10 +137,15 @@ resize();
 		int len = items.length + size;
         int temp = 0;
         for (int i = size; i < len; i++) {
+            if (size == list.length) {
+            	resize();
+            }
             list[i] = items[temp];
             temp++;
+            size++;
         }
-        size = len;
+
+        // size = len;
 	}
     /*
      * The size method returns the value of the size.

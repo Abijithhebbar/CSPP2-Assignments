@@ -144,7 +144,7 @@ public StringList(int n) {
             size++;
         }
 
-        // size = len;
+        // size = len; 
 	}
     /*
      * The size method returns the value of the size.

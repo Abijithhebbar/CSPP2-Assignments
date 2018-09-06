@@ -52,13 +52,14 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
 
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    private int size;
+    /**
+     * initializing the size.
+     **/private int size;
     final int a;
 
     /*
@@ -75,6 +76,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
+        // private a = 10;
         a = 10;
         list = new int[a];
 
@@ -99,7 +101,7 @@ public class List {
      */
     /**
      * @param capacity int.
-     * @return .
+     * @return capacity.
      */
     public List(final int capacity) {
         size = 0;
@@ -190,7 +192,7 @@ public class List {
      * The method returns void (nothing)
      */
 /**
- * @param index.
+ * @param index int.
  */
     public void remove(final int index) {
         // write the logic for remove here.
@@ -318,7 +320,7 @@ public class List {
          * @param index int index.
          * @param item int.
          */
-    public void add(final int index, int item) {
+    public void add(final int index, final int item) {
          // write the logic
         for (int i = size; i > index; i--) {
             list[i] = list[i - 1];

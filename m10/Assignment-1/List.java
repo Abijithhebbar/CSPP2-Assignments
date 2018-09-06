@@ -59,7 +59,8 @@ public class List {
     // variable initialization should be done in the constructor
     /**
      * initializing the size.
-     **/private int size;
+     **/
+    private int size;
     final int a;
 
     /*

@@ -50,16 +50,6 @@ class Set {
         list[size] = item;
         size++;
     }
-    /**
-     * @param index int.
-     **/
-    public void remove(final int index) {
-    for (int i = index; i < size - 1; i++) {
-        list[i] = list[i + 1];
-      }
-      size--;
-
-  }
 /**
  * @param newArray int.
  **/
@@ -67,12 +57,6 @@ class Set {
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
             }
-int len = size + newArray.length;
-for (int i = 0; i < len; i++) {
-    if (list[i] == list[i + 1]) {
-        remove(i);
-    }
-}
 
    }
 /**

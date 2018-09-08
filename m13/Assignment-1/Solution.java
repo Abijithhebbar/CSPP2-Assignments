@@ -124,12 +124,12 @@ class Set {
  * @param list1 set.
  * @return int array.
  */
-    int[][] cartesianProduct(final Set list1) {
+    int[][][] cartesianProduct(final Set list1) {
         int a, b;
         Set obj = new Set();
         a = size();
         int[] c = new int[list1.size()];
-        int[][] newArr = new int[a][list1.size];
+        int[][][] newArr = new int[a][list1.size()][2];
 // b = list1.size();
 // System.out.println(a);
         for (int j = 0; j < list1.size(); j++) {
@@ -140,9 +140,16 @@ class Set {
 
         } else {
             for (int i = 0; i < a; i++) {
-                for (int j = 0; j < list1.size; j++) {
+                for (int j = 0; j < list1.size(); j++) {
                     // System.out.println(c[j]);
-                    newArr[i][j] = list[i]+list1.get(j);
+                    for (int k = 0; k< 2; k++) {
+                         if (k == 0) {
+                            newArr[i][j][k] = list[i];
+                        } else {
+                            newArr[i][j][k] = list1.get(j);
+                        }
+                    }
+
                 }
             }
         }

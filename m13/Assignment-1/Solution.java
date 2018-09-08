@@ -92,30 +92,30 @@ class Set {
 		// }
 	}
 
-   int[][] cartesianProduct(Set list1) {
-int a,b;
-Set obj = new Set();
-a = size();
-int[] c = new int[list1.size()];
-int[][] newArr = new int[a][list1.size];
+	int[][] cartesianProduct(Set list1) {
+		int a, b;
+		Set obj = new Set();
+		a = size();
+		int[] c = new int[list1.size()];
+		int[][] newArr = new int[a][list1.size];
 // b = list1.size();
 // System.out.println(a);
-for (int j = 0; j < list1.size(); j++) {
-c[j] = list1.get(j);
-}
-if (a == 0 || list1.size() == 0) {
-	return null;
+		for (int j = 0; j < list1.size(); j++) {
+			c[j] = list1.get(j);
+		}
+		if (a == 0 || list1.size() == 0) {
+			return null;
 
-   } else {
-for(int i = 0; i < a; i++){
-	for (int j = 0; j < list1.size; j++) {
-		// System.out.println(c[j]);
-		newArr[i][j] = list[i];
+		} else {
+			for (int i = 0; i < a; i++) {
+				for (int j = 0; j < list1.size; j++) {
+					// System.out.println(c[j]);
+					newArr[i][j] = list[i];
+				}
+			}
+		}
+		return newArr;
 	}
-}
-}
-return newArr;
-}
 }
 /**
  * Solution class for code-eval.

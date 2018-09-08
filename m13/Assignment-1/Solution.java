@@ -96,29 +96,25 @@ class Set {
 int a,b;
 Set obj = new Set();
 a = size();
+int[] c = new int[list1.size()];
+int[][] newArr = new int[a][list1.size];
 // b = list1.size();
 // System.out.println(a);
+for (int j = 0; j < list1.size(); j++) {
+c[j] = list1.get(j);
+}
 if (a == 0 || list1.size() == 0) {
 	return null;
-   } else {
-   	System.out.print("[");
-   	for ( int i = 0; i < a; i++) {
-   		for (int j = 0; j < list1.size(); j++) {
-   			// int k = get(j);
-   			System.out.print("["+list[i]+","+list1.get(j) + "]");
-   			if (j < ((list1.size)-1)) {
-   			System.out.print(", ");
-   		}
-   		if (i < (a-1)) {
-   			System.out.print(", ");
-   		}
-   		}
-   		// System.out.print("]");
 
-   	}
-   	System.out.print("]");
-   }
-   return null;
+   } else {
+for(int i = 0; i < a; i++){
+	for (int j = 0; j < list1.size; j++) {
+		// System.out.println(c[j]);
+		newArr[i][j] = list[i];
+	}
+}
+}
+return newArr;
 }
 }
 /**

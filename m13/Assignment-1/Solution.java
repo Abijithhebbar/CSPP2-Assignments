@@ -15,9 +15,11 @@ class Set {
     	list = new int[20];
     	size = 0;
     }
+
     public int size() {
     return size;
   }
+
     boolean contains(int item) {
     	for (int i = 0; i < size; i++) {
     		if (item == list[i]) {
@@ -26,15 +28,19 @@ class Set {
     	}
     	return false;
     }
+
     void add(int item) {
     	list[size] = item;
     	size++;
     }
+
     void add(int[] newArray) {
     	for (int i = 0; i <newArray.length; i++) {
     		add(newArray[i]);
     	}
+
     }
+
     public String toString() {
 
     if (size == 0) {
@@ -49,6 +55,61 @@ class Set {
     return str;
   }
 
+
+   Set retainAll(int[] newList) {
+   	Set obj = new Set();
+   	for (int item: list) {
+   		for (int i = 0; i < newList.length; i++) {
+   			if (item == newList[i]) {
+   				obj.add(item);   	   			}
+   		}
+
+   	}
+   	return obj;
+   }
+
+
+Set intersection(Set newList) {
+   	Set obj = new Set();
+   	for (int item: list) {
+   		for (int i = 0; i < newList.size(); i++) {
+   			if (item == newList.get(i)) {
+   				obj.add(item);   	   			}
+   		}
+
+   	}
+   	return obj;
+   }
+
+
+    public int get(final int index) {
+    // if (index < 0 || index >= size) {
+    //   return -1;
+    // } else {
+      return list[index];
+    // }
+  }
+
+//    int[][] cartesianProduct(Set list1) {
+// int a,b;
+// Set obj = new Set();
+// a = list.length;
+// b = list1.size();
+// if (a == 0 || b == 0) {
+// 	return null;
+//    } else {
+//    	System.out.print("[");
+//    	for ( int i = 0; i < a; i++) {
+//    		for (int j = 0; j < b; j++) {
+//    			int k = get(j);
+//    			System.out.print("["+list[i]+","+k + "]");
+//    		}
+//    		// System.out.print("]");
+//    	}
+//    	System.out.print("]");
+//    }
+//    return null;
+// }
 }
 /**
  * Solution class for code-eval.
@@ -121,14 +182,14 @@ public final class Solution {
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                // System.out.println(s.intersection(t));
+                System.out.println(s.intersection(t));
                 break;
                 case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
-                // System.out.println(s.retainAll(intArray));
+                System.out.println(s.retainAll(intArray));
                 break;
                 case "cartesianProduct":
                 s = new Set();

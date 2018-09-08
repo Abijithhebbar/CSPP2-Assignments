@@ -9,13 +9,20 @@ import java.util.Arrays;
 class Set {
 	//your code goes here...
 	//Good luck :-)
-	int[] list;
-	int size;
+	/**
+	 * initilaizing the array.
+	 **/
+	private int[] list;
+	/**
+	 initializing size variable.
+	 **/
+	private int size;
 	/**
 	 constructor.
 	 **/
-	public Set() {
-		list = new int[20];
+	protected Set() {
+		final int z = 20;
+		list = new int[z];
 		size = 0;
 	}
 /**

@@ -11,16 +11,24 @@ class Set {
 	//Good luck :-)
 	int[] list;
 	int size;
+	/**
+	 constructor.
+	 **/
 	public Set() {
 		list = new int[20];
 		size = 0;
 	}
-
+/**
+ * @return Size.
+ **/
 	public int size() {
 		return size;
 	}
-
-	boolean contains(int item) {
+/**
+ * @param item int.
+ * @return true or false.
+ **/
+	boolean contains(final int item) {
 		for (int i = 0; i < size; i++) {
 			if (item == list[i]) {
 				return true;
@@ -28,19 +36,25 @@ class Set {
 		}
 		return false;
 	}
-
-	void add(int item) {
+/**
+ * @param item int.
+ **/
+	void add(final int item) {
 		list[size] = item;
 		size++;
 	}
-
-	void add(int[] newArray) {
+/**
+ * @param newArray int.
+ **/
+	void add(final int[] newArray) {
 		for (int i = 0; i < newArray.length; i++) {
 			add(newArray[i]);
 		}
 
 	}
-
+/**
+* @return String.
+ **/
 	public String toString() {
 
 		if (size == 0) {
@@ -54,9 +68,12 @@ class Set {
 		str = str + list[i] + "}";
 		return str;
 	}
+/**
+ * @param newList int.
+ * @return object.
+ **/
 
-
-	Set retainAll(int[] newList) {
+	Set retainAll(final int[] newList) {
 		Set obj = new Set();
 		for (int item : list) {
 			for (int i = 0; i < newList.length; i++) {
@@ -68,9 +85,12 @@ class Set {
 		}
 		return obj;
 	}
+/**
+ * @param newList set.
+ * @return object.
+ **/
 
-
-	Set intersection(Set newList) {
+	Set intersection(final Set newList) {
 		Set obj = new Set();
 		for (int item : list) {
 			for (int i = 0; i < newList.size(); i++) {
@@ -82,8 +102,10 @@ class Set {
 		}
 		return obj;
 	}
-
-
+/**
+ * @param index int.
+ * @return value.
+ **/
 	public int get(final int index) {
 		// if (index < 0 || index >= size) {
 		//   return -1;
@@ -91,8 +113,11 @@ class Set {
 		return list[index];
 		// }
 	}
-
-	int[][] cartesianProduct(Set list1) {
+/**
+ * @param list1 set.
+ * @return int array.
+ */
+	int[][] cartesianProduct(final Set list1) {
 		int a, b;
 		Set obj = new Set();
 		a = size();
@@ -162,13 +187,15 @@ public final class Solution {
 			String line = stdin.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
+			// based on the list operation
+			//invoke the corresponding method
 			switch (tokens[0]) {
 			case "size":
 				System.out.println(s.size());
 				break;
 			case "contains":
-				System.out.println(s.contains(Integer.parseInt(tokens[1])));
+				System.out.println(s.contains
+					(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
 				System.out.println(s);
@@ -204,7 +231,8 @@ public final class Solution {
 				s.add(intArray);
 				intArray = intArray(tokens[2]);
 				t.add(intArray);
-				System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+				System.out.println(Arrays.deepToString
+					(s.cartesianProduct(t)));
 				break;
 			default:
 				break;

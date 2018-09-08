@@ -142,7 +142,7 @@ class Set {
             for (int i = 0; i < a; i++) {
                 for (int j = 0; j < list1.size; j++) {
                     // System.out.println(c[j]);
-                    newArr[i][j] = list[i];
+                    newArr[i][j] = list[i]+list1.get(j);
                 }
             }
         }

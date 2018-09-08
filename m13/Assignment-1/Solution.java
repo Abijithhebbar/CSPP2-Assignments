@@ -194,7 +194,7 @@ public final class Solution {
 				System.out.println(s.size());
 				break;
 			case "contains":
-				System.out.println(s.contains(Integer.parseInt(tokens[1])));
+System.out.println(s.contains(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
 				System.out.println(s);

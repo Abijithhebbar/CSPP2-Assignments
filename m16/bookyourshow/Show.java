@@ -9,4 +9,7 @@ class Show {
 		this. seatNumber = seatNumber;
 		this.booked = new Patron[seatNumber.length];
 	}
+	public String toString() {
+		return movieName+","+dateTime;
+	}
 }

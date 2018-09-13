@@ -16,54 +16,54 @@ class BookYourShow {
 	}
 	public Show getAShow(String moviename, String datetime) {
 		for (Show s : showsArray) {
-			if(s!=null) {
-			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
-				return s;
+			if (s != null) {
+				if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
+					return s;
+				}
 			}
 		}
-	}
 		return null;
 	}
 	public void bookAShow(String moviename, String datetime, Patron p, String[] seats) {
 		for (Show s : showsArray) {
-			if(s!=null) {
-			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
-				for (String seatnum : seats) {
-					for (int i = 0; i < s.seatNumber.length; i++) {
-						if (s.seatNumber[i].equals(seatnum)) {
-							s.seatNumber[i] = "N/A";
-							s.booked[i] = p;
+			if (s != null) {
+				if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
+					for (String seatnum : seats) {
+						for (int i = 0; i < s.seatNumber.length; i++) {
+							if (s.seatNumber[i].equals(seatnum)) {
+								s.seatNumber[i] = "N/A";
+								s.booked[i] = p;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-	}
 	public void showAll() {
-		for(Show s:showsArray) {
-			if(s!=null){
+		for (Show s : showsArray) {
+			if (s != null) {
 
 			}
 		}
 	}
 	public void printTicket(String moviename, String datetime, String mobilenum) {
 		boolean booked = false;
-		for(Show s:showsArray){
-			if(s!=null) {
-			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)){
-				for(int i =0;i<s.booked.length;i++) {
-					if(s.booked[i]!=null) {
-					if(s.booked[i].mobileNumber.equals(mobilenum)) {
-						booked=true;
+		for (Show s : showsArray) {
+			if (s != null) {
+				if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
+					for (int i = 0; i < s.booked.length; i++) {
+						if (s.booked[i] != null) {
+							if (s.booked[i].mobileNumber.equals(mobilenum)) {
+								booked = true;
+							}
+						}
 					}
 				}
 			}
 		}
-	}
-	}
-		if(booked){
-			System.out.println("");
+		if (booked) {
+			System.out.println(mobilenum + " " + moviename + " " + datetime);
 		}
 	}
 }

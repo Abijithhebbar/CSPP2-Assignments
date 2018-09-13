@@ -16,10 +16,12 @@ class BookYourShow {
 	}
 	public Show getAShow(String moviename, String datetime) {
 		for (Show s : showsArray) {
+			if(s!=null) {
 			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
 				return s;
 			}
 		}
+	}
 		return null;
 	}
 	public void bookAShow(String moviename, String datetime, Patron p, String[] seats) {
@@ -38,12 +40,15 @@ class BookYourShow {
 	}
 	public void showAll() {
 		for(Show s:showsArray) {
+			if(s!=null){
 
+			}
 		}
 	}
 	public void printTicket(String moviename, String datetime, String mobilenum) {
 		boolean booked = false;
 		for(Show s:showsArray){
+			if(s!=null) {
 			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)){
 				for(int i =0;i<s.booked.length;i++) {
 					if(s.booked[i].mobileNumber.equals(mobilenum)) {
@@ -52,6 +57,7 @@ class BookYourShow {
 				}
 			}
 		}
+	}
 		if(booked){
 			System.out.println("");
 		}

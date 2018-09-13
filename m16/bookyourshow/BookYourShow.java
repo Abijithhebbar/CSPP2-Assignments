@@ -65,5 +65,8 @@ class BookYourShow {
 		if (booked) {
 			System.out.println(mobilenum + " " + moviename + " " + datetime);
 		}
+		else{
+			System.out.println("Invalid");
+		}
 	}
 }

@@ -25,14 +25,14 @@ class BookYourShow {
 		return null;
 	}
 	public void bookAShow(String moviename, String datetime, Patron p, String[] seats) {
-	if(size==0){
-		System.out.println("No show");
-		return;
-	}
-	if(getAShow(moviename,datetime)==null) {
-		System.out.println("No show");
-		return;
-	}
+		if (size == 0) {
+			System.out.println("No show");
+			return;
+		}
+		if (getAShow(moviename, datetime) == null) {
+			System.out.println("No show");
+			return;
+		}
 		for (Show s : showsArray) {
 			if (s != null) {
 				if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
@@ -51,7 +51,13 @@ class BookYourShow {
 	public void showAll() {
 		for (Show s : showsArray) {
 			if (s != null) {
-
+				String res = s.movieName + ",";
+				res += s.dateTime + ",[";
+				for (int i = 0; i < s.seatNumber.length - 1; i++) {
+					res += s.seatNumber[i] + ",";
+				}
+				res += s.seatNumber[s.seatNumber.length - 1] + "]";
+				System.out.println(res);
 			}
 		}
 	}
@@ -72,8 +78,7 @@ class BookYourShow {
 		}
 		if (booked) {
 			System.out.println(mobilenum + " " + moviename + " " + datetime);
-		}
-		else{
+		} else {
 			System.out.println("Invalid");
 		}
 	}

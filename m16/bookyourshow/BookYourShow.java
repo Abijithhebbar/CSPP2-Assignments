@@ -25,6 +25,10 @@ class BookYourShow {
 		return null;
 	}
 	public void bookAShow(String moviename, String datetime, Patron p, String[] seats) {
+	if(size==0){
+		System.out.println("No show");
+		return;
+	}
 		for (Show s : showsArray) {
 			if (s != null) {
 				if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {

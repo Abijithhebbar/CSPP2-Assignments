@@ -51,12 +51,14 @@ class BookYourShow {
 			if(s!=null) {
 			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)){
 				for(int i =0;i<s.booked.length;i++) {
+					if(s.booked[i]!=null) {
 					if(s.booked[i].mobileNumber.equals(mobilenum)) {
 						booked=true;
 					}
 				}
 			}
 		}
+	}
 	}
 		if(booked){
 			System.out.println("");

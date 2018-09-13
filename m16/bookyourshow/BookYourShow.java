@@ -1,9 +1,4 @@
 class BookYourShow {
-	// int[] a = {1, 2, 3, 5};
-	// String[] b = {"1", "2"};
-	// Show s1 = new Show("mov1", "dattime1", b);
-	// Show s2 = new Show("mov2", "dattime2", b);
-	// Show[] showsArray = {s1,s2};
 	Show[] showsArray;
 	int size;
 	BookYourShow() {

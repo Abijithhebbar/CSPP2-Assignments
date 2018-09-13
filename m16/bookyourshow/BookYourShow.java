@@ -26,6 +26,7 @@ class BookYourShow {
 	}
 	public void bookAShow(String moviename, String datetime, Patron p, String[] seats) {
 		for (Show s : showsArray) {
+			if(s!=null) {
 			if (s.movieName.equals(moviename) && s.dateTime.equals(datetime)) {
 				for (String seatnum : seats) {
 					for (int i = 0; i < s.seatNumber.length; i++) {
@@ -37,6 +38,7 @@ class BookYourShow {
 				}
 			}
 		}
+	}
 	}
 	public void showAll() {
 		for(Show s:showsArray) {

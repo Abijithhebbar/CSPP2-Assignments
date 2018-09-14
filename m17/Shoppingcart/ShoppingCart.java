@@ -101,11 +101,11 @@ class ShoppingCart {
 		}
 
 	}
-	void payableAmount() {
+	String payableAmount() {
 		double total = totalAmount();
 		double newTotal = (total) - discount;
 		double tax = (0.15) * (newTotal);
-		System.out.println("Payable amount: " + (newTotal + tax));
+		return "Payable amount: " + (newTotal + tax);
 	}
 
 	void showCart() {

@@ -32,7 +32,8 @@ class Solution {
 				shop.printInvoice();
 				break;
 			case "payableAmount":
-				System.out.println(shop.payableAmount());
+			System.out.print("Payable amount: ");
+				System.out.print(shop.payableAmount());
 				break;
 			case "coupon":
 				shop.applyDiscount(input[1]);

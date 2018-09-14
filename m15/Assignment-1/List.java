@@ -161,30 +161,30 @@ public class List {
      *
      * @param      index  The index
      **/
-    // public void remove(final int index) {
-    //     // write the logic for remove here. Think about what to do to the size
-    //     // variable.
-    //     // if (index >= 0 && index < size) {
-    //     //     for (int i = index; i < size - 1; i++) {
-    //     //         list[i] = list[i + 1];
-    //     //     }
-    //     //     size--;
-    //     // } else {
-    //     //     System.out.println("Invalid Position Exception");
-    //     // }
-    //     try {
-    //         if (index >= 0 && index < size) {
-    //         for (int i = index; i < size - 1; i++) {
-    //             list[i] = list[i + 1];
-    //         }
-    //         size--;
-    //     } else {
-    //          throw new InvalidPositionException("");
-    //     }
-    // } catch (InvalidPositionException ip) {
-    //         System.out.println("Invalid Position Exception");
-    //     }
-    // }
+    public void remove(final int index) {
+        // write the logic for remove here. Think about what to do to the size
+        // variable.
+        // if (index >= 0 && index < size) {
+        //     for (int i = index; i < size - 1; i++) {
+        //         list[i] = list[i + 1];
+        //     }
+        //     size--;
+        // } else {
+        //     System.out.println("Invalid Position Exception");
+        // }
+        try {
+            if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+        } else {
+             throw new InvalidPositionException("");
+        }
+    } catch (InvalidPositionException ip) {
+            System.out.println("Invalid Position Exception");
+        }
+    }
 
 
     /**
@@ -292,7 +292,7 @@ public class List {
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (newArray[i] == list[j]) {
-                //remove(j);
+                remove(j);
                 j--;
             }
             // if (newArray[i] == list[j]) {
@@ -418,7 +418,7 @@ public class List {
                 break;
                 case "remove":
                     if (tokens.length == 2) {
-                        //l.remove(Integer.parseInt(tokens[1]));
+                        l.remove(Integer.parseInt(tokens[1]));
                     }
                 break;
                 case "indexOf":

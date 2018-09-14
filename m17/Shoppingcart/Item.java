@@ -1,27 +1,23 @@
 class Item {
-	String itemName;
-	int itemQuantity;
-	double itemPrice;
-	Item(String name, String qunat, String price) {
-		itemPrice = Double.parseDouble(price);
-		itemQuantity = Integer.parseInt(qunat);
-		itemName = name;
-	}
-	Item(String name, String qunat) {
-		itemQuantity = Integer.parseInt(qunat);
-		itemName = name;
-	}
-	public boolean equals(Item other) {
-		if (!this.itemName.equals(other.itemName)) {
-			return false;
-		}
-		return true;
-	}
-	public String toString() {
-		return this.itemName + " " + this.itemQuantity + " " + this.itemPrice;
-	}
-	public String toString1() {
-		return this.itemName + " " + this.itemQuantity;
-	}
-
+	String name;
+	int quantity;
+	double price;
+	Item(String name, String quantity, String price) {
+		this.name = name;
+		this.quantity = Integer.parseInt(quantity);
+		this.price = Double.parseDouble(price);
+    }
+    Item(String name, String quantity) {
+		this.name = name;
+		this.quantity = Integer.parseInt(quantity);
+    }
+    public String toString() {
+    	return this.name+" "+this.quantity+" "+this.price;
+    }
+    public boolean equals(Item other) {
+    	if (this.name.equals(other.name)) {
+    		return true;
+    	}
+    	return false;
+    }
 }

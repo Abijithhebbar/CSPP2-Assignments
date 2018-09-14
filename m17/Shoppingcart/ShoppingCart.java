@@ -1,146 +1,142 @@
-class ShoppingCart {
-	Item[] cart;
+class ShoppingCart{
 	Item[] catalog;
+	Item[] cart;
 	int cartSize;
 	int catalogSize;
-	static boolean coupen = true;;
-	static double discount = 0.0;
-	String[] coupens = {"IND10", "IND20", "IND30", "IND50"};
-	ShoppingCart() {
-		cart = new Item[20];
+	String[] validCoupons ={"IND10","IND20","IND30","IND50"};
+	static double discount =0.0;
+	static boolean couponApplied = false;
+
+	ShoppingCart(){
 		catalog = new Item[20];
-		cartSize = 0;
-		catalogSize = 0;
+		cart = new Item[20];
+		cartSize=0;
+		catalogSize =0;
 	}
 
-	void addToCart(Item item) {
-		if (!inCart(item)) {
-			if (checkQunatity(item)) {
-				cart[cartSize++] = item;
+	void addToCatalog(Item item){
+		catalog[catalogSize++] = item;
 
+	}
+	void addToCart(Item item){
+		if(!inCart(item)){
+			if(checkCatalog(item)){
+				cart[cartSize++] = item;
 			}
 		}
 	}
-	private boolean inCart(Item item) {
-		for (int i = 0 ; i < cartSize; i++) {
-			if (cart[i].equals(item)) {
-				cart[i].itemQuantity += item.itemQuantity;
-				return true;
+	boolean inCart(Item item){
+		for(Item s : cart){
+			if(s!=null){
+				if(s.equals(item)){
+					s.quantity =s.quantity+item.quantity;
+					return true;
+				}
 			}
 		}
 		return false;
-
 	}
-	boolean checkQunatity(Item item) {
-		for (Item i : catalog) {
-			if (i != null) {
-				if (i.equals(item)) {
-					if (item.itemQuantity <= i.itemQuantity) {
-						i.itemQuantity = i.itemQuantity - item.itemQuantity;
+
+	private boolean checkCatalog(Item given){
+		for(Item i : catalog){
+			if(i!=null){
+				if(i.equals(given)){
+					if(given.quantity<= i.quantity){
+						i.quantity = i.quantity- given.quantity;
 						return true;
 					}
+
 				}
 			}
 		}
 		return false;
 	}
-	void addToCatalog(Item item) {
-		catalog[catalogSize++] = item;
-	}
-	void removeFromCart(Item item) {
-		int index;
-		int inittialQuat = 0;
-		for (index = 0; index < cartSize; index++) {
-			if (item.equals(cart[index])) {
-				cart[index].itemQuantity = cart[index].itemQuantity - item.itemQuantity;
-			}
-		}
-	}
 
-	void printInvoice() {
-		System.out.println("Name   quantity   Price");
-		for (Item i : cart) {
-			if (i != null) {
-				if (i.itemQuantity != 0) {
-					System.out.println(i.toString1() + " " + getPrice(i));
-					System.out.println(payableAmount());
-				}
+	void removeFromCart(Item item){
+		for(int i =0;i<cartSize;i++){
+			if(item.equals(cart[i])){
+				cart[i].quantity= cart[i].quantity-item.quantity;
 			}
-		}
-		double total = totalAmount();
-		System.out.println("Total:" + total);
-		System.out.println("Disc%:" + discount);
-		double newTotal = total - discount;
-		System.out.println("Tax:" + (0.15) * newTotal);
-		payableAmount();
-	}
-	void applyDiscount(String cou) {
-		double dis = 0.0;
-		if (!coupen) {
-			return;
-		}
-		boolean valid = false;
-		for (int i = 0; i < coupens.length; i++) {
-			if (cou.equals(coupens[i])) {
-				int num = Integer.parseInt(cou.substring(3));
-				dis = num;
-				coupens[i] = null;
-				coupen = false;
-				valid = true;
-			}
-		}
-		if (valid) {
-			double total = totalAmount();
-			double dis1 = (total / 100) * dis;
-			discount = dis1;
-		} else {
-			System.out.println("Invalid coupon");
 		}
 
 	}
-	double payableAmount() {
-		double total = totalAmount();
-		double newTotal = (total) - discount;
-		double tax = (0.15) * (newTotal);
-		return (newTotal + tax);
-	}
-
-	void showCart() {
-		for (Item i : cart) {
-			if (i != null) {
-				if (i.itemQuantity != 0) {
-					System.out.println(i.toString1());
+	void showCart(){
+		for(Item i : cart){
+			if(i!=null){
+				if(i.quantity!=0){
+					System.out.println(i.name+" "+i.quantity);
 				}
 			}
 		}
 	}
-	double getPrice(Item given) {
-		for (Item i : catalog) {
-			if (i.equals(given)) {
-				return i.itemPrice;
-			}
-		}
-		return 0.0;
-	}
-	void showCatalog() {
-		for (Item i : catalog) {
-			if (i != null) {
+	void showCatalog(){
+		for(Item i : catalog){
+			if(i!=null){
 				System.out.println(i);
 			}
 		}
-
 	}
-	double totalAmount() {
-		double total = 0;
-		for (Item i : cart) {
-			if (i != null) {
-				total += getPrice(i) * i.itemQuantity;
-			}
+	double getTotalAmount(){
+		double total=0;
+		for(int i =0; i< cartSize;i++){
+			total += cart[i].quantity * getPrice(cart[i]);
 		}
 		return total;
 
 	}
-
-
-
+	double getPrice(Item given){
+		for(Item i : catalog){
+			if(i!=null){
+				if(i.equals(given)){
+					return i.price;
+				}
+			}
+		}
+		return 0.0;
+	}
+	void applyCoupon(String cou){
+		boolean valid= false;
+		for(String s : validCoupons){
+			if(s.equals(cou)){
+				valid = true;
+			}
+		}
+		if(!valid){
+			System.out.println("Invalid coupon");
+			return;
+		}
+		if(couponApplied){
+			return;
+		}
+		for(String s : validCoupons){
+			if(s.equals(cou)){
+				int num =  Integer.parseInt(cou.substring(3));
+				discount = getTotalAmount()/100*num;
+				couponApplied = true;
+			}
+		}
+	}
+	void printInvoice(){
+		System.out.println("Name   quantity   Price");
+		for(Item s : cart){
+			if(s!=null){
+				if(s.quantity!=0) {
+			        System.out.println(s.name+" "+s.quantity+" "+getPrice(s));
+		        }
+		    }
+		}
+		double total = getTotalAmount();
+		double newTotal = total - discount;
+		double tax = newTotal *15/100;
+		System.out.println("Total:"+getTotalAmount());
+		System.out.println("Disc%:"+discount);
+		System.out.println("Tax:"+tax);
+		System.out.println("Payable amount: "+getPayableAmount());
+	}
+    public double getPayableAmount() {
+		double total = getTotalAmount();
+		double newTotal = total - discount;
+		double tax = newTotal *15/100;
+		return newTotal+tax;
+    }
 }

@@ -14,7 +14,6 @@ class ShoppingCart {
 	}
 
 	void addToCart(Item item) {
-		//System.out.println(checkQunatity(item));
 		if (!inCart(item)) {
 			if (checkQunatity(item)) {
 				cart[cartSize++] = item;
@@ -36,7 +35,6 @@ class ShoppingCart {
 		for (Item i : catalog) {
 			if (i != null) {
 				if (i.equals(item)) {
-					//System.out.println(item.itemQuantity+"-"+i.itemQuantity);
 					if (item.itemQuantity <= i.itemQuantity) {
 						i.itemQuantity = i.itemQuantity - item.itemQuantity;
 						return true;
@@ -65,6 +63,7 @@ class ShoppingCart {
 			if (i != null) {
 				if (i.itemQuantity != 0) {
 					System.out.println(i.toString1() + " " + getPrice(i));
+					System.out.println(payableAmount());
 				}
 			}
 		}
@@ -78,12 +77,10 @@ class ShoppingCart {
 	void applyDiscount(String cou) {
 		double dis = 0.0;
 		if (!coupen) {
-			//System.out.println("Invalid coupon");
 			return;
 		}
 		boolean valid = false;
 		for (int i = 0; i < coupens.length; i++) {
-			//System.out.println("******"+cou);
 			if (cou.equals(coupens[i])) {
 				int num = Integer.parseInt(cou.substring(3));
 				dis = num;
@@ -111,7 +108,6 @@ class ShoppingCart {
 	void showCart() {
 		for (Item i : cart) {
 			if (i != null) {
-				//System.out.println("++++++"+i.itemQuantity);
 				if (i.itemQuantity != 0) {
 					System.out.println(i.toString1());
 				}
@@ -141,7 +137,6 @@ class ShoppingCart {
 				total += getPrice(i) * i.itemQuantity;
 			}
 		}
-		//System.out.println("totalAmount: "+total);
 		return total;
 
 	}

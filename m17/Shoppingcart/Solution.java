@@ -33,7 +33,7 @@ class Solution {
 				break;
 			case "payableAmount":
 			System.out.print("Payable amount: ");
-				System.out.print(shop.payableAmount());
+				System.out.print(shop.payableAmount()+"\n");
 				break;
 			case "coupon":
 				shop.applyDiscount(input[1]);

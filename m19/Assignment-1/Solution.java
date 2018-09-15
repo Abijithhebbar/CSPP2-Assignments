@@ -71,7 +71,8 @@ public final class Solution {
 			return;
 		}
 		if (checkQuestion.length < 4) {
-			System.out.println(check[1]+" does not have enough answer choices");
+			System.out.println(check[0]+" does not have enough answer choices");
+			return;
 		}
 		if (questionCount == 0) {
 			System.out.println("Quiz does not have questions");

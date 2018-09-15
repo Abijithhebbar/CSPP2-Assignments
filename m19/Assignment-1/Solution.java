@@ -80,6 +80,7 @@ public final class Solution {
         }
         if (check[0].length() == 0) {
             System.out.println("Error! Malformed question");
+            return;
         }
         int penalyCheck = Integer.parseInt(check[z]);
         if (penalyCheck > 0) {

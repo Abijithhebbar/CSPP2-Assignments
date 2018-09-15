@@ -117,9 +117,8 @@ System.out.println(check[0] + " does not have enough answer choices");
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        String b = s.nextLine();
-        String[] output = b.split(":");
-        System.out.println(output.length);
+        // String b = s.nextLine();
+        // String[] output = b.split(":");
         // // String[] display = output[1].split(",");
         // System.out.println(output[0]);
         // // for (int i = 0; i < (display.length - 1); i++) {

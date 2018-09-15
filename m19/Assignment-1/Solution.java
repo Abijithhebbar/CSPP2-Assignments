@@ -78,8 +78,8 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             return;
         }
-        if (check[0] == null) {
-            System.out.println("");
+        if (check[0].equals(null)) {
+            System.out.println("Error! Malformed question");
         }
         int penalyCheck = Integer.parseInt(check[z]);
         if (penalyCheck > 0) {

@@ -73,6 +73,7 @@ public final class Solution {
         int help = Integer.parseInt(check[2]);
         final int z = 4;
         final int y = 5;
+        final int x = 3;
         if (check.length < y) {
             System.out.println("Error! Malformed question");
             return;
@@ -82,7 +83,7 @@ public final class Solution {
             System.out.println("Invalid penalty for " + check[0]);
             return;
         }
-        int marksCheck = Integer.parseInt(check[3]);
+        int marksCheck = Integer.parseInt(check[x]);
         if (marksCheck < 0) {
             System.out.println("Invalid max marks for " + check[0]);
             return;
@@ -94,7 +95,7 @@ System.out.println(check[0] + " does not have enough answer choices");
 
         if (help > z) {
             System.out.println(
-                "Error! Correct answer choice number is out of range for question text 1");
+"Error! Correct answer choice number is out of range for question text 1");
             return;
         }
         System.out.println(questionCount + " are added to the quiz");

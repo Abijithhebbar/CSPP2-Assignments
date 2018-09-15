@@ -66,6 +66,10 @@ public final class Solution {
 		String[] check = a.split(":");
 		String[] checkQuestion = check[1].split(",");
 		int help = Integer.parseInt(check[2]);
+		if (questionCount == 0) {
+			System.out.println("Quiz does not have questions");
+			return;
+		}
 		if (check.length < 5) {
 			System.out.println("Error! Malformed question");
 			return;
@@ -84,10 +88,7 @@ public final class Solution {
 			System.out.println(check[0]+" does not have enough answer choices");
 			return;
 		}
-		if (questionCount == 0) {
-			System.out.println("Quiz does not have questions");
-			return;
-		}
+
 		if (help > 4) {
 			System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			return;

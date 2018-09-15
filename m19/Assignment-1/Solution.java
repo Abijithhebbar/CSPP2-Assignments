@@ -120,10 +120,10 @@ System.out.println(check[0] + " does not have enough answer choices");
         String[] output = b.split(":");
         String[] display = output[1].split(",");
         System.out.println(output[1]);
-        for (int i = 0; i < display.length - 1; i++) {
+        for (int i = 0; i < (display.length - 1); i++) {
             System.out.print(display[i]+"   ");
         }
-        System.out.print(display[display.length]);
+        System.out.print(display[display.length - 1]);
         System.out.println("");
     }
 

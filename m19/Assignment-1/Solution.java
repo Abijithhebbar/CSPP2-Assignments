@@ -66,6 +66,11 @@ public final class Solution {
 		String[] check = a.split(":");
 		String[] checkQuestion = check[1].split(",");
 		int help = Integer.parseInt(check[2]);
+		int penalyCheck = Integer.parseInt(check[4]);
+		if(penalyCheck > 0) {
+			System.out.println("Invalid penalty for "+check[1]);
+			return;
+		}
 		if (check.length < 5) {
 			System.out.println("Error! Malformed question");
 			return;

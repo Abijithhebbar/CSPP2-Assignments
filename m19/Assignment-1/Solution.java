@@ -126,9 +126,6 @@ System.out.println(check[0] + " does not have enough answer choices");
         // // }
         // // System.out.print(display[display.length - 1]);
         // // System.out.println("");
-        String c = s.nextLine();
-        String[] p = c.split(":");
-        System.out.println(p[0]);
     }
 
     /**.

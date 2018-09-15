@@ -75,7 +75,11 @@ public final class Solution {
 			System.out.println("Invalid penalty for "+check[0]);
 			return;
 		}
-
+		int marksCheck = Integer.parseInt(check[3]);
+		if(marksCheck < 0) {
+			System.out.println("Invalid max marks for "+check[0]);
+			return;
+		}
 		if (checkQuestion.length < 4) {
 			System.out.println(check[0]+" does not have enough answer choices");
 			return;

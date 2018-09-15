@@ -68,7 +68,7 @@ public final class Solution {
 		int help = Integer.parseInt(check[2]);
 		int penalyCheck = Integer.parseInt(check[4]);
 		if(penalyCheck > 0) {
-			System.out.println("Invalid penalty for "+check[1]);
+			System.out.println("Invalid penalty for "+check[0]);
 			return;
 		}
 		if (check.length < 5) {

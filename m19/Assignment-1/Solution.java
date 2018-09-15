@@ -65,7 +65,7 @@ public final class Solution {
 		String check = s.nextLine();
 		String[] check1 = check.split(":");
 		int help = Integer.parseInt(check1[2]);
-		if(check1[4] == null) {
+		if(check1.length<5) {
 			System.out.println("Error! Malformed question");
 			return;
 		}

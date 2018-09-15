@@ -62,14 +62,15 @@ public final class Solution {
 		// write your code here to read the questions from the console
 		// tokenize the question line and create the question object
 		// add the question objects to the quiz class
-		String a = s.nextLine();
-		String[] check = a.split(":");
-		String[] checkQuestion = check[1].split(",");
-		int help = Integer.parseInt(check[2]);
 		if (questionCount == 0) {
 			System.out.println("Quiz does not have questions");
 			return;
 		}
+		String a = s.nextLine();
+		String[] check = a.split(":");
+		String[] checkQuestion = check[1].split(",");
+		int help = Integer.parseInt(check[2]);
+
 		if (check.length < 5) {
 			System.out.println("Error! Malformed question");
 			return;

@@ -66,15 +66,16 @@ public final class Solution {
 		String[] check = a.split(":");
 		String[] checkQuestion = check[1].split(",");
 		int help = Integer.parseInt(check[2]);
+		if (check.length < 5) {
+			System.out.println("Error! Malformed question");
+			return;
+		}
 		int penalyCheck = Integer.parseInt(check[4]);
 		if(penalyCheck > 0) {
 			System.out.println("Invalid penalty for "+check[0]);
 			return;
 		}
-		if (check.length < 5) {
-			System.out.println("Error! Malformed question");
-			return;
-		}
+
 		if (checkQuestion.length < 4) {
 			System.out.println(check[0]+" does not have enough answer choices");
 			return;

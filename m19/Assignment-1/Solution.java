@@ -65,8 +65,9 @@ public final class Solution {
 		String check = s.nextLine();
 		String[] check1 = check.split(":");
 		int help = Integer.parseInt(check1[2]);
-		if(check1[3] == null) {
+		if(check1[4] == null) {
 			System.out.println("Error! Malformed question");
+			return;
 		}
 		if(questionCount == 0){
 			System.out.println("Quiz does not have questions");

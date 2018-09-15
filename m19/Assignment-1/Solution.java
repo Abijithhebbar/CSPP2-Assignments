@@ -65,12 +65,12 @@ public final class Solution {
 		String check = s.nextLine();
 		String[] check1 = check.split(":");
 		int help = Integer.parseInt(check1[2]);
-		if(help>4) {
-			System.out.println("Error! Correct answer choice number is out of range for question text 1");
-			return;
-		}
 		if(questionCount == 0){
 			System.out.println("Quiz does not have questions");
+			return;
+		}
+		if(help>4) {
+			System.out.println("Error! Correct answer choice number is out of range for question text 1");
 			return;
 		}
 		System.out.println(questionCount + " are added to the quiz");

@@ -332,7 +332,13 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
-
+        if (quiz.getSize() >= q) {
+            for (int i = 0; i < q; i++) {
+                System.out.println(quiz.getQuestion(i).toString());
+                String line = scan.nextLine();
+                quiz.getQuestion(i).setResponse(line);
+            }
+        }
     }
     /**
      * Displays the score report.

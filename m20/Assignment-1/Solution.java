@@ -119,7 +119,7 @@ System.out.println(check[0] + " does not have enough answer choices");
         // store the user respones in the quiz object
         String b = s.nextLine();
         String[] output = b.split(":");
-        String[] display = output[1].split(",");
+        String[] display = output[0].split(",");
         System.out.println(output[0]);
         for (int i = 0; i < (display.length - 1); i++) {
             System.out.print(display[i] + "   ");

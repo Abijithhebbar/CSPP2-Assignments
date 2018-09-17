@@ -244,7 +244,7 @@ System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 s.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+System.out.println((s.cartesianProduct(t)));
                 break;
             default:
                 break;

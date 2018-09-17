@@ -202,6 +202,9 @@ class Quiz {
         }
         return s;
     }
+    /**
+     * @return size.
+     **/
     public int getSize() {
         return this.size;
     }

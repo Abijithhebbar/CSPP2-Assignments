@@ -58,7 +58,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-        return false;
+        return getCorrectAnswer().equals(choice);
     }
     /**
      * Gets the correct answer.
@@ -66,7 +66,7 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
-         if (this.choices.length >= this.correctAnswer) {
+        if (this.choices.length >= this.correctAnswer) {
             return this.choices[this.correctAnswer - 1];
         }
         return null;
@@ -133,7 +133,6 @@ class Question {
         return s;
     }
 }
-
 /**
  * Class for quiz.
  */
@@ -181,7 +180,7 @@ class Quiz {
      * @return     { description_of_the_return_value }
      */
     public String showReport() {
-         String s = "";
+        String s = "";
         int score = 0, c = 0;
         for (int i = 0; i < this.size; i++) {
             s += questions[i].getQuestionText() + "\n";
@@ -203,12 +202,13 @@ class Quiz {
         return s;
     }
     /**
-     * @return size.
-     **/
+     * Gets the size.
+     *
+     * @return     The size.
+     */
     public int getSize() {
         return this.size;
     }
-
 }
 /**
  * Solution class for code-eval.
@@ -221,14 +221,16 @@ public final class Solution {
         // leave this blank
     }
     /**
-     * main function to execute test cases.
+     * Main function.
      *
-     * @param      args  The arguments
+     * @param      args       The arguments
+     *
+     * @throws     Exception  { exception_description }
      */
-    public static void main(final String[] args) {
-         // instantiate this Quiz
+    public static void main(final String[] args) throws Exception {
+        // instantiate this Quiz
         Quiz q = new Quiz();
-         // code to read the test cases input file
+        // code to read the test cases input file
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
         while (s.hasNext()) {
@@ -243,11 +245,10 @@ public final class Solution {
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
                 try {
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
-            } catch (Exception e) {
+                    loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
-
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -271,23 +272,24 @@ public final class Solution {
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
-     * @throws     Exception exception.
+     * @param      q          The quarter
+     *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
-        final Quiz quiz, final int q) throws Exception {
+        final Quiz quiz, final int q)  throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         final int three = 3;
         final int four = 4;
         final int five = 5;
-         if (q > 0) {
+        if (q > 0) {
             for (int i = 0; i < q; i++) {
                 String line = scan.nextLine();
                 String[] input = line.split(":");
                 if (input.length == five && input[0].length() > 1) {
-                     String[] choic = input[1].split(",");
+                    String[] choic = input[1].split(",");
                     if (choic.length > 1) {
                         if (Integer.parseInt(input[2]) <= choic.length) {
                             if (Integer.parseInt(input[three]) > 0) {
@@ -321,7 +323,6 @@ public final class Solution {
         } else {
             throw new Exception("Quiz does not have questions");
         }
-
     }
     /**
      * Starts a quiz.

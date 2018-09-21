@@ -9,13 +9,13 @@ class Solution {
 			String input = sc.nextLine();
 			File inpfile = new File(input);
 			File[] filearr = inpfile.listFiles();
-			System.out.print("\t"+"\t");
-            for (File file : filearr){
-            	System.out.print(file.getName()+"\t");
-            }
-            System.out.println();
+			System.out.print("\t" + "\t");
+			for (File file : filearr) {
+				System.out.print(file.getName() + "\t");
+			}
+			System.out.println();
 			for (int i = 0; i < filearr.length; i++) {
-				System.out.print(filearr[i].getName()+"\t");
+				System.out.print(filearr[i].getName() + "\t");
 				for (int j = 0; j < filearr.length; j++) {
 					Bagofwords bag = new Bagofwords();
 
@@ -40,7 +40,7 @@ class Solution {
 					}
 					inp1.close();
 
-					System.out.print(bag.plagerismChecker(map, newmap)+"\t\t");
+					System.out.print(bag.plagerismChecker(map, newmap) + "\t\t");
 
 				}
 				System.out.println();

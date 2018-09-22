@@ -15,19 +15,16 @@ class Task{
 			taskName();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			return;
 		}
 		try {
 		toDotime();
 		} catch (Exception e) {
 		System.out.println(e.getMessage());
-		return;
 		}
 		try {
 			statusCheck();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
-			return;
 		}
 	}
 	public void checkStatus() {
@@ -43,36 +40,30 @@ class Task{
 		}
 	}
 	public void taskName() throws Exception {
-			try {if (assignedTo != null) {
+			if (assignedTo != null) {
 				assignedTo = assignedTo;
-			}
-			} catch (Exception e){
+			} else {
 				throw new Exception("Title not provided");
 			}
 	}
 	public void toDotime() throws Exception {
-		try {
 			if (timeToComplete > 1) {
 				timeToComplete = timeToComplete;
-		}
-	}
-		catch (Exception e) {
-				System.out.println("Invalid timeToComplete "+timeToComplete);
+			} else {
+				throw new Exception("Invalid timeToComplete "+timeToComplete);
 			}
 
 	}
 	public void statusCheck() throws Exception {
 		String a = "done";
 		String b = "todo";
-			try {if (status.equals(a)) {
+			if (status.equals(a)) {
 				status = status;
 			}
 			else if (status.equals(b)) {
 				status =status;
-			}
-			}
-			catch (Exception e) {
-				System.out.println("Invalid status "+status);
+			} else {
+				throw new Exception("Invalid status "+status);
 			}
 	}
 	public String toString() {

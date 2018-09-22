@@ -21,11 +21,11 @@ class Task{
 		} catch (Exception e) {
 		System.out.println(e.getMessage());
 		}
-		// try {
-		// 	statusCheck();
-		// } catch (Exception e) {
-		// 	System.out.println(e.getMessage());
-		// }
+		try {
+			statusCheck();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	public void checkStatus() {
 		if (important == true && urgent == true) {
@@ -54,13 +54,16 @@ class Task{
 			}
 
 	}
-	// public void statusCheck() throws Exception {
-	// 		if (status == "done" || status == "todo") {
-	// 			status = status;
-	// 		} else {
-	// 			throw new Exception("Invalid status "+status);
-	// 		}
-	// }
+	public void statusCheck() throws Exception {
+			if (status == "done") {
+				status = status;
+			}
+			else if (status == "todo") {
+				status =status;
+			} else {
+				throw new Exception("Invalid status "+status);
+			}
+	}
 	public String toString() {
 		return (title+", "+assignedTo+", "+timeToComplete+", "+importantStatus+", "+urgentStatus+", "+status);
 	// return title;

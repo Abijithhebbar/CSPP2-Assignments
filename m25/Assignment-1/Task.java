@@ -2,6 +2,7 @@ class Task{
 	String title, assignedTo, status, importantStatus, urgentStatus;
 	int timeToComplete;
 	boolean important, urgent;
+	Task (){}
 	Task(String title, String assignedTo, int timeToComplete, boolean important, boolean urgent, String status) {
 		this.title = title;
 		this.assignedTo = assignedTo;
@@ -50,7 +51,7 @@ class Task{
 		}
 	}
 	public String toString() {
-		System.out.println(title+", "+assignedTo+", "+timeToComplete+", "+importantStatus+", "+urgentStatus+", "+status);
-	return title;
+		return (title+", "+assignedTo+", "+timeToComplete+", "+importantStatus+", "+urgentStatus+", "+status);
+	// return title;
 	}
 }

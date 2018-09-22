@@ -18,30 +18,30 @@ public class TodoistMain {
         Scanner s = new Scanner(System.in);
         while (s.hasNext()) {
             String[] tokens = s.nextLine().split(",");
-            // switch (tokens[0]) {
-            //     case "task":
-            //         testTask(tokens);
-            //     break;
-            //     case "add-task":
-            //         testAddTask(todo, tokens);
-            //     break;
-            //     case "print-todoist":
-            //         System.out.println(todo);
-            //     break;
-            //     case "get-next":
-            //         System.out.println(todo.getNextTask(tokens[1]));
-            //     break;
-            //     case "get-next-n":
-            //         int n = Integer.parseInt(tokens[2]);
-            //         Task[] tasks = todo.getNextTask(tokens[1], n);
-            //         System.out.println(Arrays.deepToString(tasks));
-            //     break;
-            //     case "total-time":
-            //         System.out.println(todo.totalTime4Completion());
-            //     break;
-            //     default:
-            //     break;
-            // }
+            switch (tokens[0]) {
+                case "task":
+                    testTask(tokens);
+                break;
+                case "add-task":
+                    testAddTask(todo, tokens);
+                break;
+                case "print-todoist":
+                    System.out.println(todo);
+                break;
+                case "get-next":
+                    System.out.println(todo.getNextTask(tokens[1]));
+                break;
+                // case "get-next-n":
+                //     int n = Integer.parseInt(tokens[2]);
+                //     Task[] tasks = todo.getNextTask(tokens[1], n);
+                //     System.out.println(Arrays.deepToString(tasks));
+                // break;
+                case "total-time":
+                    System.out.println(todo.totalTime4Completion());
+                break;
+                default:
+                break;
+            }
         }
     }
 
@@ -70,6 +70,9 @@ public class TodoistMain {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+    public static void testAddTask(Todoist todo, String[] s) {
+
     }
 
     /**

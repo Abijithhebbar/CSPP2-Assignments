@@ -31,8 +31,11 @@ class Todoist{
 		return s;
 	}
 	public int totalTime4Completion(){
+		for (int i = 0; i < 9; i++) {
+			t += task[i].timeToComplete;
+		}
 		return t;
-
+		}
 	// }
 	// public String toString() {
 	// 	String str = "";
@@ -45,5 +48,4 @@ class Todoist{
 	// // 	Task[] newtask = new Task();
 	// // 	return newtask;
 	// // }
-}
 }

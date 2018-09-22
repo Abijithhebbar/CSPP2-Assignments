@@ -37,7 +37,13 @@ public class TodoistMain {
                 //     System.out.println(Arrays.deepToString(tasks));
                 // break;
                 case "total-time":
-                    System.out.println(todo.totalTime4Completion());
+                int n;
+                n = 0;
+                for (int i = 0; i < 9; i++) {
+                	n += Integer.parseInt(tokens[3]);
+                    // System.out.println(todo.totalTime4Completion());
+                }
+                System.out.println(n);
                 break;
                 default:
                 break;

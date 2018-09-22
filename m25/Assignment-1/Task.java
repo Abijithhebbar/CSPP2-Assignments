@@ -15,16 +15,19 @@ class Task{
 			taskName();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			return;
 		}
 		try {
 		toDotime();
 		} catch (Exception e) {
 		System.out.println(e.getMessage());
+		return;
 		}
 		try {
 			statusCheck();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			return;
 		}
 	}
 	public void checkStatus() {

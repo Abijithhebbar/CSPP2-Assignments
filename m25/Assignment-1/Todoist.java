@@ -31,9 +31,6 @@ class Todoist{
 		return s;
 	}
 	public int totalTime4Completion(){
-		for (int i = 0; i < 9; i++) {
-			t += task[i].timeToComplete;
-		}
 		return t;
 		}
 	// }

@@ -43,30 +43,36 @@ class Task{
 		}
 	}
 	public void taskName() throws Exception {
-			if (assignedTo != null) {
+			try {if (assignedTo != null) {
 				assignedTo = assignedTo;
-			} else {
-				throw new Exception("Title not provided");
+			}
+			} catch (Exception e) {
+				System.out.println("Title not provided");
 			}
 	}
 	public void toDotime() throws Exception {
+		try {
 			if (timeToComplete > 1) {
 				timeToComplete = timeToComplete;
-			} else {
-				throw new Exception("Invalid timeToComplete "+timeToComplete);
+		}
+	}
+		catch (Exception e) {
+				System.out.println("Invalid timeToComplete "+timeToComplete);
 			}
 
 	}
 	public void statusCheck() throws Exception {
 		String a = "done";
 		String b = "todo";
-			if (status.equals(a)) {
+			try {if (status.equals(a)) {
 				status = status;
 			}
 			else if (status.equals(b)) {
 				status =status;
-			} else {
-				throw new Exception("Invalid status "+status);
+			}
+			}
+			catch (Exception e) {
+				System.out.println("Invalid status "+status);
 			}
 	}
 	public String toString() {

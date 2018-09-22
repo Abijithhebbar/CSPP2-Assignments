@@ -55,10 +55,12 @@ class Task{
 
 	}
 	public void statusCheck() throws Exception {
-			if (status == "done") {
+		String a = "done";
+		String b = "todo";
+			if (status.equals(a)) {
 				status = status;
 			}
-			else if (status == "todo") {
+			else if (status.equals(b)) {
 				status =status;
 			} else {
 				throw new Exception("Invalid status "+status);

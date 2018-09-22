@@ -11,9 +11,21 @@ class Task{
 		this.urgent = urgent;
 		this.status = status;
 		checkStatus();
-		taskName();
+		try {
+			taskName();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		try {
 		toDotime();
-		statusCheck();
+		} catch (Exception e) {
+		System.out.println(e.getMessage());
+		}
+		try {
+			statusCheck();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	public void checkStatus() {
 		if (important == true && urgent == true) {
@@ -27,32 +39,27 @@ class Task{
 			urgentStatus = "Not Urgent";
 		}
 	}
-	public void taskName(){
-		try {
+	public void taskName() throws Exception {
 			if (assignedTo != null) {
 				assignedTo = assignedTo;
+			} else {
+				throw new Exception("Title not provided");
 			}
-		} catch (Exception e) {
-			System.out.println("Title not provided");
-		}
 	}
-	public void toDotime() {
-		try {
+	public void toDotime() throws Exception {
 			if (timeToComplete > 1) {
 				timeToComplete = timeToComplete;
+			} else {
+				throw new Exception("Invalid timeToComplete "+timeToComplete);
 			}
-		} catch (Exception e) {
-			System.out.println("Invalid timeToComplete "+timeToComplete);
-		}
+
 	}
-	public void statusCheck() {
-		try {
+	public void statusCheck() throws Exception {
 			if (status == "done" || status == "todo") {
 				status = status;
+			} else {
+				throw new Exception("Invalid status "+status);
 			}
-		} catch (Exception e) {
-			System.out.println("Invalid status "+status);
-		}
 	}
 	public String toString() {
 		return (title+", "+assignedTo+", "+timeToComplete+", "+importantStatus+", "+urgentStatus+", "+status);

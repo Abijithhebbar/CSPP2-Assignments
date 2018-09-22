@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 /**
   * write your code below this comment
@@ -8,8 +8,13 @@ import java.util.Arrays;
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+final class TodoistMain {
+	/**
+	 * constructor.
+	**/
+private TodoistMain() {
 
+}
     /**
      * Starts a test.
      */
@@ -37,13 +42,7 @@ public class TodoistMain {
                 //     System.out.println(Arrays.deepToString(tasks));
                 // break;
                 case "total-time":
-                int n;
-                n = 0;
-                for (int i = 0; i < 9; i++) {
-                	n += Integer.parseInt(tokens[3]);
-                    // System.out.println(todo.totalTime4Completion());
-                }
-                System.out.println(n);
+                    System.out.println(todo.totalTime4Completion());
                 break;
                 default:
                 break;

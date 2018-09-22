@@ -46,8 +46,8 @@ class Task{
 			try {if (assignedTo != null) {
 				assignedTo = assignedTo;
 			}
-			} catch (Exception e) {
-				System.out.println("Title not provided");
+			} catch (Exception e){
+				throw new Exception("Title not provided");
 			}
 	}
 	public void toDotime() throws Exception {

@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Class for todoist main.
  */
 final class TodoistMain {
-	/**
-	 * constructor.
-	**/
+    /**
+     * constructor.
+    **/
 private TodoistMain() {
 
 }
@@ -56,7 +56,8 @@ private TodoistMain() {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    // public static void testAddTask(final Todoist todo, final String[] tokens) {
+    // public static void testAddTask(
+    //final Todoist todo, final String[] tokens) {
     //     try {
     //         todo.addTask(createTask(tokens));
     //     } catch (Exception e) {
@@ -76,7 +77,11 @@ private TodoistMain() {
             System.out.println(e.getMessage());
         }
     }
-    public static void testAddTask(Todoist todo, String[] s) {
+    /**
+     * @param todo [description].
+     * @param s [description].
+     **/
+    public static void testAddTask(final Todoist todo, final String[] s) {
 
     }
 

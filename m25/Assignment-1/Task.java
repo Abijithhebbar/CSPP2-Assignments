@@ -10,6 +10,10 @@ class Task{
 		this.important = important;
 		this.urgent = urgent;
 		this.status = status;
+		checkStatus();
+		taskName();
+		toDotime();
+		statusCheck();
 	}
 	public void checkStatus() {
 		if (important == true && urgent == true) {

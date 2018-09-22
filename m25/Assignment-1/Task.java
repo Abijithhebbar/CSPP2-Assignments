@@ -50,6 +50,7 @@ class Task{
 		}
 	}
 	public String toString() {
-		return (title+", "+assignedTo+", "+timeToComplete+", "+importantStatus+", "+urgentStatus+", "+status);
+		System.out.println(title+", "+assignedTo+", "+timeToComplete+", "+importantStatus+", "+urgentStatus+", "+status);
+	return title;
 	}
 }
